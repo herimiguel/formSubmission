@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h2>Something went wrong!</h2>
+    <ul>
+    @{
+        foreach(var field in ViewBag.ModelFields){
+            if(field.Errors.Count > 0){
+                <li>@field.Errors[0].ErrorMessage</li>
+            }
+        }
+    }
+</ul>
+<a href="/">Go back Home to Enter the correct Information!</a>
+
+</body>
+
+</html>
